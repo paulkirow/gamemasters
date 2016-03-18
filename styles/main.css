@@ -22,6 +22,10 @@ html, body {
   height: 48px;
   border-radius: 24px;
 }
+.gm-logo {
+  width: 40px;
+  height: 40px;
+}
 .gm-layout .gm-header .mdl-textfield {
   padding: 0px;
   margin-top: 41px;
@@ -100,9 +104,10 @@ html, body {
   color: rgba(255, 255, 255, 0.56);
   font-weight: 500;
 }
-.gm-layout .gm-navigation .mdl-navigation__link:hover {
-  background-color: #00BCD4;
-  color: #37474F;
+.gm-layout .gm-navigation .mdl-navigation__link:hover,
+.gm-layout .gm-navigation .mdl-navigation__link:hover .material-icons{
+  background-color: #727272;
+  color: #212121;
 }
 .gm-navigation .mdl-navigation__link .material-icons {
   font-size: 24px;
@@ -112,54 +117,6 @@ html, body {
 
 .gm-content {
   max-width: 1080px;
-}
-
-.gm-charts {
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  -ms-grid-row-align: center;
-  align-items: center;
-}
-.gm-chart:nth-child(1) {
-  color: #ACEC00;
-}
-.gm-chart:nth-child(2) {
-  color: #00BBD6;
-}
-.gm-chart:nth-child(3) {
-  color: #BA65C9;
-}
-.gm-chart:nth-child(4) {
-  color: #EF3C79;
-}
-.gm-graphs {
-  padding: 16px 32px;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-}
-/* TODO: Find a proper solution to have the graphs
- * not float around outside their container in IE10/11.
- * Using a browserhacks.com solution for now.
- */
-_:-ms-input-placeholder, :root .gm-graphs {
-  min-height: 664px;
-}
-_:-ms-input-placeholder, :root .gm-graph {
-  max-height: 300px;
-}
-/* TODO end */
-.gm-graph:nth-child(1) {
-  color: #00b9d8;
-}
-.gm-graph:nth-child(2) {
-  color: #d9006e;
 }
 
 .gm-cards {
@@ -187,7 +144,7 @@ _:-ms-input-placeholder, :root .gm-graph {
 }
 .gm-updates .mdl-card__title {
   min-height: 200px;
-  background-image: url('images/dog.png');
+  background-image: url('../images/dog.png');
   background-position: 90% 100%;
   background-repeat: no-repeat;
 }
@@ -221,4 +178,76 @@ _:-ms-input-placeholder, :root .gm-graph {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.gm-notify {
+  top: 80% !important;
+  left: 80% !important;
+  font-size:15px;
+  color: rgb(255,87,34);
+}
+
+.mdl-button {
+  overflow: visible;
+}
+
+.gm-feed {
+  margin: 40px;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  padding: 0;
+  color: inherit;
+  width: calc(100% - 80px);
+}
+
+section .gm-feed-circle{
+  width: 64px;
+  height: 64px;
+  border-radius: 32px;
+  margin: 8px 0;
+}
+section .gm-feed-square{
+  width: 100px;
+  height: 64px;
+  border-radius: 5px;
+  margin: 8px 0;
+}
+section .gm-feed-small-square{
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  margin: 8px 0;
+}
+
+section .gm-feed-text h5 {
+  font-size: inherit;
+  margin: 0;
+  margin-bottom: 0.5em;
+}
+section .gm-feed-text a {
+  text-decoration: none;
+}
+
+section .gm-feed-image {
+  width: 20px;
+  height: 20px;
+}
+section .gm-feed button {
+  margin: 16px 8px 16px 0px;
+}
+
+.mdl-layout.is-small-screen .mdl-layout__tab-bar .mdl-button {
+  display: none;
+}
+.mdl-layout:not(.is-small-screen) .mdl-layout__tab-bar,
+.mdl-layout:not(.is-small-screen) .mdl-layout__tab-bar-container {
+  overflow: visible;
+}
+.mdl-layout__tab-bar {
+  height: 48px;
+}
+
+.visually-hide {
+  visibility: hidden;
 }
