@@ -1,0 +1,206 @@
+<!doctype html>
+<!--
+  Material Design Lite
+  Copyright 2015 Google Inc. All rights reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License
+-->
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="The underground table-top game community.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Material Design Lite</title>
+
+	<!-- Add to homescreen for Chrome on Android -->
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="application-name" content="GameMasters">
+	<link rel="icon" sizes="192x192" href="images/android-desktop.png?v=2">
+
+	<!-- Add to homescreen for Safari on iOS -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title" content="GameMasters">
+	<link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png?v=2">
+
+	<!-- Tile icon for Win8 (144x144 + tile color) -->
+	<meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png?v=2">
+	<meta name="msapplication-TileColor" content="#3372DF">
+
+	<link rel="shortcut icon" href="images/favicon.png?v=2">
+
+	<link rel="stylesheet"
+				href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.1.2/material.deep_orange-indigo.min.css"/>
+	<link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+<div class="gm-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+	<header class="gm-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
+		<div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">
+            <img src="images/gm-logo.png" class="gm-logo">
+          </span>
+			<div class="mdl-layout-spacer"></div>
+			<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+				<label class="mdl-button mdl-js-button mdl-button--icon" for="search">
+					<i class="material-icons">search</i>
+				</label>
+				<div class="mdl-textfield__expandable-holder">
+					<input class="mdl-textfield__input" type="text" id="search">
+					<label class="mdl-textfield__label" for="search">Enter your query...</label>
+				</div>
+			</div>
+			<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
+				<i class="material-icons">email</i>
+				<i class="gm-notify material-icons">error</i>
+			</button>
+			<ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
+				<li class="mdl-menu__item">Warhammer Request From Adam S.</li>
+				<li class="mdl-menu__item">Friend Request From Joey V.</li>
+			</ul>
+		</div>
+	</header>
+	<div class="mdl-tabs mdl-js-tabs">
+		<div class="mdl-layout__tab-bar">
+			<a href="index.html" class="mdl-layout__tab is-active">Feed</a>
+			<a href="players.html" class="mdl-layout__tab">Players</a>
+			<a href="locations.html" class="mdl-layout__tab">Locations</a>
+		</div>
+	</div>
+	<div class="gm-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
+		<header class="gm-drawer-header">
+			<img src="images/user.jpg" class="gm-avatar">
+			<div class="gm-avatar-dropdown">
+				<span>Paul Kirow</span>
+				<div class="mdl-layout-spacer"></div>
+				<button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+					<i class="material-icons" role="presentation">arrow_drop_down</i>
+					<span class="visuallyhidden">Accounts</span>
+				</button>
+				<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
+					<li class="mdl-menu__item">change picture</li>
+					<li class="mdl-menu__item">view profile</li>
+				</ul>
+			</div>
+		</header>
+		<nav class="gm-navigation mdl-navigation mdl-color--blue-grey-800">
+			<a class="mdl-navigation__link" href="index.html"><i class="material-icons" role="presentation">home</i>Home</a>
+			<a class="mdl-navigation__link" href="mail.html"><i class="material-icons" role="presentation">forum</i>Messages</a>
+			<a class="mdl-navigation__link" href="friends.html"><i class="material-icons" role="presentation">people</i>Friends</a>
+			<a class="mdl-navigation__link" href="matches.html"><i class="material-icons" role="presentation">history</i>Match History</a>
+			<div class="mdl-layout-spacer"></div>
+			<a class="mdl-navigation__link" href="settings.html"><i class="material-icons" role="presentation">settings</i>Settings</a>
+		</nav>
+	</div>
+	<main class="mdl-layout__content mdl-color--grey-100">
+		<section class="mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+			<div class="mdl-card mdl-cell mdl-cell--12-col">
+				<div class="gm-feed mdl-grid mdl-grid--no-spacing">
+					<div class="mdl-cell--2-col mdl-cell--1-col-phone">
+						<img class="gm-feed-small-square mdl-color--primary" src="images/user-x.jpg"/>
+						<img class="gm-feed-small-square mdl-color--primary" src="images/user-w.jpg"/>
+					</div>
+					<div class="gm-feed-text mdl-cell mdl-cell--6-col-desktop mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+						<h5>Upcoming Battle</h5>
+						James S. Vs. Bob L. in Warhammer
+					</div>
+					<div class="mdl-cell--4-col-desktop mdl-cell--2-col-tablet mdl-cell--1-col-phone">
+						<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+							<i class="material-icons">forward</i>
+						</button>
+						<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon visually-hide">
+							<i class="material-icons">forward</i>
+						</button>
+						0.5mi
+					</div>
+
+					<div class="mdl-cell--2-col mdl-cell--1-col-phone">
+						<img class="gm-feed-square" src="images/store-a.jpg"/>
+					</div>
+					<div class="gm-feed-text mdl-cell mdl-cell--6-col-desktop mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+						<h5>Upcoming Event</h5>
+						A Yugioh tournament is happening 3 days from now at Games Boutique.
+					</div>
+					<div class="mdl-cell--4-col-desktop mdl-cell--2-col-tablet mdl-cell--1-col-phone">
+						<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+							<i class="material-icons">forward</i>
+						</button>
+						<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon visually-hide">
+							<i class="material-icons">forward</i>
+						</button>
+						0.7mi
+					</div>
+
+					<div class="mdl-cell--2-col mdl-cell--1-col-phone">
+						<img class="gm-feed-square" src="images/store-b.jpg"/>
+					</div>
+					<div class="gm-feed-text mdl-cell mdl-cell--6-col-desktop mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+						<h5>Store Event</h5>
+						Card Emporium is selling new cards today.
+					</div>
+					<div class="mdl-cell--4-col-desktop mdl-cell--2-col-tablet mdl-cell--1-col-phone">
+						<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+							<i class="material-icons">forward</i>
+						</button>
+						<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon visually-hide">
+							<i class="material-icons">forward</i>
+						</button>
+						1.8mi
+					</div>
+
+					<div class="mdl-cell--2-col mdl-cell--1-col-phone">
+						<img class="gm-feed-square" src="images/user-z.jpg"/>
+					</div>
+					<div class="gm-feed-text mdl-cell mdl-cell--6-col-desktop mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+						<h5>New Warhammer Player</h5>
+						Hana G. joined GameMasters recently.
+					</div>
+					<div class="mdl-cell--4-col-desktop mdl-cell--2-col-tablet mdl-cell--1-col-phone">
+						<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+							<i class="material-icons">forward</i>
+						</button>
+						<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon visually-hide">
+							<i class="material-icons">forward</i>
+						</button>
+						2.0mi
+					</div>
+
+					<div class="mdl-cell--2-col mdl-cell--1-col-phone">
+						<img class="gm-feed-small-square" src="images/user-v.jpg"/>
+						<img class="gm-feed-small-square" src="images/user-y.jpg"/>
+					</div>
+					<div class="gm-feed-text mdl-cell mdl-cell--6-col-desktop mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+						<h5>New Match Recorded</h5>
+						See the results of a recent D&D match
+					</div>
+					<div class="mdl-cell--4-col-desktop mdl-cell--2-col-tablet mdl-cell--1-col-phone">
+						<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+							<i class="material-icons">forward</i>
+						</button>
+						<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon visually-hide">
+							<i class="material-icons">forward</i>
+						</button>
+						3.8mi
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+</div>
+
+<script src="https://code.getmdl.io/1.1.2/material.min.js"></script>
+</body>
+</html>
