@@ -248,6 +248,36 @@ section .gm-feed button {
   height: 48px;
 }
 
+.gm-profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+}
+
 .visually-hide {
   visibility: hidden;
+}
+.gm-profile h5 {
+  display: inline;
+}
+.gm-badge-container{
+
+}
+.gm-badge {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 25px;
+}
+.gm-badge-chal{
+  width: 36px;
+  height: 36px;
+}
+.gm-badge img {
+  width: 56px;
+  height: 56px;
+  position: relative;
+
+  left: -3px;
+  top: -3px;
 }
